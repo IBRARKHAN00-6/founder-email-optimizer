@@ -3,7 +3,7 @@ import dspy
 
 # Writer: produces subject + body using structured slots + template
 class DraftEmail(dspy.Signature):
-    """Write a YC-founder-friendly cold email: ≤120 words, 1 metric of proof, 1 clear CTA.
+    """Write a startup-founder-friendly cold email: ≤120 words, 1 metric of proof, 1 clear CTA.
     No fluff. Be specific and polite. Keep subject ≤6 words, no clickbait."""
     first_name: str = dspy.InputField()
     company: str = dspy.InputField()
@@ -43,7 +43,7 @@ class ExtractSlots(dspy.Signature):
 
 # Judge: returns JSON {score: int(0-10), reason: str}
 class JudgeEmail(dspy.Signature):
-    """Score for YC founders: brevity, specificity, proof (numbers), peer signal, clear CTA."""
+    """Score for startup founders: brevity, specificity, proof (numbers), peer signal, clear CTA."""
     subject: str = dspy.InputField()
     body: str = dspy.InputField()
     json: str = dspy.OutputField()

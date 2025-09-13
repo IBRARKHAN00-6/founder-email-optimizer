@@ -1,6 +1,6 @@
-# YC Email Optimizer (DSPy)
+# Founder Email Optimizer (DSPy)
 
-Give us your **3 best cold emails** and a **leads CSV**. Get back optimized, YC‑style outreach.
+Give us your **3 best cold emails** and a **leads CSV**. Get back optimized, founder‑style outreach.
 
 ## Quickstart
 ```bash
@@ -42,7 +42,7 @@ OPENAI_API_KEY=...
 - `--variants 3 --pick best` (generate N and keep highest judge score)
 - Clickbait guard: hard stop if subject contains spammy tokens
 - Subject‑line policy: enforce presence of a concrete noun + numeric
-- Persona presets: `--persona yc_founder` vs `--persona cio_enterprise`
+- Persona presets: `--persona startup_founder` vs `--persona cio_enterprise`
 - Cache control: set unique `rollout_id` when you want fresh generations
 
 ## Usage Examples
