@@ -1,0 +1,10 @@
+Subject: {subject_hook}
+
+Hi {first_name},
+
+YC teams like {company} often struggle with {pain}. We built {product} to help with {product_value}.
+Example: {customer_example} → {impact_metric}.
+
+Worth a 12‑min chat to see if {product} helps {company}?
+
+– {sender_name}, {sender_role}

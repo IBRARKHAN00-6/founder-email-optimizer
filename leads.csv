@@ -1,0 +1,4 @@
+first_name,company,persona,pain,product,product_value,customer_example,impact_metric,sender_name,sender_role
+Maya,HeronAI,Head of RevOps,manual QA on AI replies,EvalOps,trustable evals & feedback loops,AcmeCo,"cut bad replies 37%",Jonathan,CEO
+Alex,DevFlow,CTO,slow deployment cycles,FastDeploy,automated CI/CD pipelines,PostHog,"reduced deploy time 50%",Sarah,Head of DevRel
+Jordan,ScaleUp,VP Engineering,high GPU costs,BatchOpt,intelligent resource batching,TechCorp,"saved $12K monthly",Mike,Founder
