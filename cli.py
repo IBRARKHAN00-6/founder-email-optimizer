@@ -35,6 +35,16 @@ def build_trainset_from_wins(wins_df: pd.DataFrame, template: str):
         train.append(row_to_example(slots, template, subj, body))
     return train
 
+def gepa_metric_wrapper(gold, pred, trace=None, pred_name=None, pred_trace=None):
+    """Wrapper for GEPA which requires 5 parameters but sometimes only passes 2"""
+    # Handle both calling conventions
+    if trace is None:
+        # Called with just (gold, pred) during evaluation
+        return scoring_metric(gold, pred)
+    else:
+        # Called with all 5 parameters during optimization
+        return scoring_metric(gold, pred, trace)
+
 def compile_program(trainset, optimizer: str):
     prog = EmailProgram()
     if optimizer == "none" or len(trainset) == 0:
@@ -42,6 +52,23 @@ def compile_program(trainset, optimizer: str):
     if optimizer == "bootstrap":
         tele = dspy.BootstrapFewShot(metric=scoring_metric, max_bootstrapped_demos=min(4, len(trainset)))
         return tele.compile(prog, trainset=trainset)
+    if optimizer == "gepa":
+        # GEPA requires a reflection LM - use the same model with higher temperature
+        reflection_lm = dspy.LM(
+            model=os.getenv("MODEL_ID", "openai/gpt-4o-mini"),
+            api_key=os.getenv("OPENAI_API_KEY", os.getenv("API_KEY", "")),
+            api_base=os.getenv("API_BASE", None),
+            temperature=1.0,
+            max_tokens=2000
+        )
+        tele = dspy.GEPA(
+            metric=gepa_metric_wrapper,
+            reflection_lm=reflection_lm,
+            track_stats=True,
+            auto="light"
+        )
+        # use same tiny set for val to keep v0 simple
+        return tele.compile(prog, trainset=trainset, valset=trainset)
     # mipro
     tele = dspy.MIPROv2(metric=scoring_metric, auto="light", num_candidates=4, init_temperature=1.0)
     # use same tiny set for val to keep v0 simple
@@ -71,7 +98,7 @@ def main():
     ap.add_argument("--leads", default="leads.csv", help="CSV of leads")
     ap.add_argument("--template", default="template.txt")
     ap.add_argument("--out", default="out.csv")
-    ap.add_argument("--optimizer", default="bootstrap", choices=["none","bootstrap","mipro"])
+    ap.add_argument("--optimizer", default="bootstrap", choices=["none","bootstrap","mipro","gepa"])
     args = ap.parse_args()
 
     configure_lm()
